@@ -1,0 +1,10 @@
+-I ../OpSem
+valid.v
+subjrnf.v
+mapsto.v
+envprops.v
+TypeThms.v
+NFprops.v
+NF.v
+ApTypes.v
+# $Id$

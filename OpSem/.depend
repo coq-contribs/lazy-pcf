@@ -1,0 +1,21 @@
+utils.vo: utils.v syntax.vo
+utils.vi: utils.v syntax.vo
+typecheck.vo: typecheck.v environments.vo syntax.vo
+typecheck.vi: typecheck.v environments.vo syntax.vo
+syntax.vo: syntax.v
+syntax.vi: syntax.v
+rename.vo: rename.v syntax.vo freevars.vo
+rename.vi: rename.v syntax.vo freevars.vo
+freevars.vo: freevars.v syntax.vo utils.vo
+freevars.vi: freevars.v syntax.vo utils.vo
+environments.vo: environments.v syntax.vo
+environments.vi: environments.v syntax.vo
+OSrules.vo: OSrules.v syntax.vo environments.vo typecheck.vo rename.vo
+OSrules.vi: OSrules.v syntax.vo environments.vo typecheck.vo rename.vo
+utils.html: utils.v syntax.html
+typecheck.html: typecheck.v environments.html syntax.html
+syntax.html: syntax.v
+rename.html: rename.v syntax.html freevars.html
+freevars.html: freevars.v syntax.html utils.html
+environments.html: environments.v syntax.html
+OSrules.html: OSrules.v syntax.html environments.html typecheck.html rename.html
