@@ -108,7 +108,7 @@ assumption.
 (* Var1 *)
 specialize inv_TC_var with (1 := H4); simpl in |- *; intro M.
 specialize  4If_T with (1 := M); intro T.
-cut (x = x). intro R; specialize T with (1 := R); intro Q.
+cut (x = x). intro R; specialize T with (1 := R); rename T into Q.
 unfold OScons in H3.
 specialize inv_valid_cons with (1 := H3); simple induction 1; intros V Te.
 elim H2 with t. intro V'; simple induction 1; intros Ten NFen.

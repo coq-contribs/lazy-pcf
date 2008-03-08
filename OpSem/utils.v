@@ -246,7 +246,7 @@ intros A B C D A1 A2.
 elim A1.
 intro; left; assumption.
 simple induction 1; intros DH CH.
-specialize A2 with (1 := DH); simple induction 1.
-intro; left; assumption.
-intro; right; split; assumption.
+specialize A2 with (1 := DH); induction A2.
+left; assumption.
+right; split; assumption.
 Save AABC_ABC.
