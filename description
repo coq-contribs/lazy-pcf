@@ -8,3 +8,4 @@ Description: An Operational Semantics of Lazy Evaluation and a Proof
 Url: http://www.cs.bell-labs.com/~felty/abstracts/ppcoq.html
 Keywords: functional programming, lazy evaluation, operational
   semantics, type soundness, normal forms
+Category: Computer Science/Lambda Calculi
