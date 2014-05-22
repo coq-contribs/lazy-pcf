@@ -233,7 +233,7 @@ simple induction 1; simple induction 1; intros Q T.
 rewrite Q.
 apply TC_abs.
 apply ren_case1.
-specialize  5AABC_ABC with (B := ~ FV nv e0) (1 := H1).
+specialize  AABC_ABC with (B := ~ FV nv e0) (1 := H1).
 intro AA; apply AA.
 intro; apply notFV_abs with t; assumption.
 assumption.
@@ -371,7 +371,7 @@ elim Q.
 apply TC_fix.
 pattern t at 2 in |- *; rewrite Q.
 apply ren_case1.
-specialize  5AABC_ABC with (1 := H1) (B := ~ FV nv e0).
+specialize  AABC_ABC with (1 := H1) (B := ~ FV nv e0).
 intro AA; apply AA.
 intro; apply notFV_fix with t; assumption.
 assumption.
@@ -424,7 +424,7 @@ red in |- *; intro; apply F; apply FV_closa; assumption.
 assumption.
 assumption.
 apply ren_case1.
-specialize  5AABC_ABC with (1 := H3) (B := ~ FV nv e0).
+specialize  AABC_ABC with (1 := H3) (B := ~ FV nv e0).
 intro AA; apply AA.
 intro F; specialize notFV_clos with (1 := F).
 simple induction 1; intros; assumption.

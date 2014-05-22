@@ -107,7 +107,7 @@ assumption.
 assumption.
 (* Var1 *)
 specialize inv_TC_var with (1 := H4); simpl in |- *; intro M.
-specialize  4If_T with (1 := M); intro T.
+specialize  If_T with (1 := M); intro T.
 cut (x = x). intro R; specialize T with (1 := R); rename T into Q.
 unfold OScons in H3.
 specialize inv_valid_cons with (1 := H3); simple induction 1; intros V Te.
@@ -157,7 +157,7 @@ specialize inv_TC_appl with (1 := H6); simple induction 1; simple induction 1;
 specialize dom_pres with (1 := H0); simpl in |- *; intro Q1.
 specialize dom_pres with (1 := H3); simpl in |- *; intro Q2.
 specialize 
- 7TEp_Ap
+ TEp_Ap
    with (a := e2) (e := en) (ne := en') (A := A) (n := n) (t := t) (1 := H2).
 intro Ap.
 elim H1 with (arr x t0). intro V'; simple induction 1; intros Ten NFen.
@@ -243,7 +243,7 @@ apply NFenat_Snoe with ((x, t) :: OS_Dom_ty A).
 assumption.
 elim Q; assumption.
 specialize 
- 3NFebool_TF with (e := en) (1 := NFen) (H := (x, t) :: OS_Dom_ty A).
+ NFebool_TF with (e := en) (1 := NFen) (H := (x, t) :: OS_Dom_ty A).
 simple induction 1.
 intro T; rewrite T; apply inv_FV_ttt.
 intro F; rewrite F; apply inv_FV_fff.
